@@ -18,10 +18,15 @@ load(`createDB/createAdminUser.js`)
 load data
 
 > load(`createDB/createCrimeSampleData.js`)
+
 > load(`createDB/createCrimeTypeSampleData.js`)
+
 > load(`createDB/createHoodSampleData.js`)
+
 > load(`createDB/createReportSampleData.js`)
+
 > load(`createDB/createReviewSampleData.js`)
+
 > load(`createDB/createUserSampleData.js`)
 
 Start the Mongo Server
