@@ -13,21 +13,21 @@ create a db folder
 > mkdir db
 
 create user
-load(`createDB/createAdminUser.js`)
+load('reateDB/createAdminUser.js')
 
 load data
 
-> load(`createDB/createCrimeSampleData.js`)
+> load('createDB/createCrimeSampleData.js')
 
-> load(`createDB/createCrimeTypeSampleData.js`)
+> load('createDB/createCrimeTypeSampleData.js')
 
-> load(`createDB/createHoodSampleData.js`)
+> load('createDB/createHoodSampleData.js')
 
-> load(`createDB/createReportSampleData.js`)
+> load('createDB/createReportSampleData.js')
 
-> load(`createDB/createReviewSampleData.js`)
+> load('createDB/createReviewSampleData.js')
 
-> load(`createDB/createUserSampleData.js`)
+> load('createDB/createUserSampleData.js')
 
 Start the Mongo Server
 
@@ -36,11 +36,13 @@ Start the Mongo Server
 Connect to the Mongo Server with either
 
 > mongo --port 3000 --authenticationDatabase admin
+
 > mongo --port 3000 -u dbAdmin -p test --authenticationDatabase admin
 
 Remember to Shut the Server properly
 
 > user admin
+
 > db.shutdownServer()
 
 In to order to run this Application,you will need:
