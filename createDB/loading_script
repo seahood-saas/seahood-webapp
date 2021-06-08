@@ -1,0 +1,22 @@
+create a db folder 
+
+> mkdir db
+
+mongod -port 3000 -dbpath "./db"
+mongo --port 3000 --authenticationDatabase admin
+mongo --port 3000 -u dbAdmin -p test --authenticationDatabase admin
+
+create user
+load(`createDB/createAdminUser.js`)
+
+load data
+> load(`createDB/createCrimeSampleData.js`)
+> load(`createDB/createCrimeTypeSampleData.js`)
+> load(`createDB/createHoodSampleData.js`)
+> load(`createDB/createReportSampleData.js`)
+> load(`createDB/createReviewSampleData.js`)
+> load(`createDB/createUserSampleData.js`)
+
+
+db.shutdownServer()
+

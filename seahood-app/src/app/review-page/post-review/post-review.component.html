@@ -1,0 +1,57 @@
+<div class="container">
+  <h2>Leave A Post/Review for a Neighborhood</h2>
+  <!--Neighbor dropdown-->
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a neighborhood</mat-label>
+    <mat-select [(ngModel)]="beat" name="beat">
+      <mat-option [value]="'none'">None</mat-option>
+      <mat-option *ngFor="let hood of hoodFromDataBase" [value]="hood.beat">
+        {{ hood.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+  <form class="form-group" #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group input-group mb-3">
+      <input
+        class="form-control input-lg"
+        id="review"
+        [(ngModel)]="review"
+        [value]="review"
+        type="text"
+        name="theForm"
+        placeholder="Post your Review"
+      />
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-success">
+          Post Review
+          <!-- <a class="nav-link" [routerLink]="['/review']">Post Review</a> -->
+        </button>
+      </div>
+    </div>
+  </form>
+  <div class="row">
+    <button
+      type="button"
+      class="btn btn-outline-secondary col-sm-6"
+      (click)="filterReview()"
+    >
+      Filter per Neighborhood / View All Post
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary col-sm-6"
+      (click)="filterPersonalReview()"
+    >
+      View My Post ({{ ownerName }})
+    </button>
+
+    <div *ngIf="this.owner === ''">
+      <h3>No User Has been Connected</h3>
+      <a type="button" class="btn btn-success" href="/auth/google"
+        >Log In here</a
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div>
+  <div class="container p-2 my-3 border">
+      <div class="container">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home"
+              >Map View</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1">List View</a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="home" class="container tab-pane active">
+            <br />
+            <app-google-map [filter]="viewMapData"></app-google-map>
+          </div>
+          <div id="menu1" class="container tab-pane">
+            <app-crime-table [filter]="viewMapData"></app-crime-table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

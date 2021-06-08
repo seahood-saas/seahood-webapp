@@ -1,0 +1,48 @@
+<div class="container p-3 my-3 border">
+  <br />
+  <h2 class="text-center">Search Criteria</h2>
+
+  <!--Crime Type Check Box-->
+  <div class="dropdown-divider"></div>
+  <form class="form-group" (ngSubmit)="filterButtonHandler()" >
+
+    <!--CrimeType dropdown-->    
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a Crime Type</mat-label>
+      <mat-select [(ngModel)]="crimeType" name="crimeType">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let crimeType of CrimeTypeFromDataBase" [value]="crimeType.Id">
+          {{crimeType.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br />
+    <!--Neighbor dropdown-->    
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a neighborhood</mat-label>
+      <mat-select [(ngModel)]="hood" name="hood">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let hood of hoodFromDataBase" [value]="hood.beat">
+          {{hood.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br />
+
+    <!-- Date input -->
+    <mat-form-field appearance="fill">
+      <mat-label>Enter a date range</mat-label>
+      <mat-date-range-input [rangePicker]="picker" [max]="maxDate">
+        <input matStartDate (dateChange)="startDateHandler($event)" placeholder="Start date" />
+        <input matEndDate (dateChange)="endDateHandler($event)" placeholder="End date" />
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+    <br />
+    <button type="submit" class="btn btn-primary" >Submit</button>
+    
+  </form>
+</div>

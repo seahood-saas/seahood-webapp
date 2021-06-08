@@ -1,0 +1,8 @@
+<div class="d-flex flex-row" style="border: 12px; margin: 12px">
+  <div class="d-flex flex-column" style="margin: 12px;">
+    <app-search-criteria (redirect) = "TransferDataFromComponents($event)"></app-search-criteria>
+  </div>
+  <div class="col-sm-9">
+    <app-view-map [viewMapData]="parentData"></app-view-map>
+  </div>
+</div>

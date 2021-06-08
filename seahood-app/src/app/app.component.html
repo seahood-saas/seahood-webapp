@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SeaHood Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    -->
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .heading32 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar with Logo -->
+    <div class="row">
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <a class="navbar-brand" [routerLink]="['/home']">
+          <img src="assets/logo.jpg" alt="logo" style="width: 80px" />
+        </a>
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item Active">
+            <a class="nav-link" [routerLink]="['/home']">Home</a>
+          </li>
+          <li class="nav-item Active">
+            <a class="nav-link" [routerLink]="['/about']">About Us</a>
+          </li>
+          <li class="nav-item Activa">
+            <a class="nav-link" [routerLink]="['/map']">Map</a>
+          </li>
+          <li class="nav-item Active">
+            <a class="nav-link" [routerLink]="['/review']">Leave Review</a>
+          </li>
+        </ul>
+      </nav>
+      <!--/.Navbar-->
+    </div>
+    <!-- Navbar with Logo -->
+    <!-- Router component-->
+    <router-outlet></router-outlet>
+    <!-- Router component-->
+    <!-- Ad Section -->
+    <app-ads-section></app-ads-section>
+    <!-- Ad Section -->
+  </body>
+</html>

@@ -1,0 +1,5 @@
+seahood-app/node_modules
+/db
+node_modules
+.vs
+.vscode
