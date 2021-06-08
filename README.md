@@ -74,6 +74,6 @@ Contributors and Developer of this Application Are:
 
 > Ben Tchamba https://www.linkedin.com/in/benaja-tchamba/
 
-> Diego Hoyos
+> Diego Hoyos https://www.linkedin.com/in/diego-hoyos-80103680/
 
 > Tuan Lo https://www.linkedin.com/in/tuan-lo/
