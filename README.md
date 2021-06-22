@@ -13,7 +13,8 @@ create a db folder
 > mkdir db
 
 create user
-load('reateDB/createAdminUser.js')
+
+> load('reateDB/createAdminUser.js')
 
 load data
 
